@@ -42,7 +42,7 @@ export default async function NotificationsPage() {
             <div
               className={cn(
                 cardStyles,
-                "flex flex-col gap-8 justify-center items-center py-12"
+                "flex flex-col gap-8 justify-center items-center py-12 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800"
               )}
             >
               <Image
@@ -50,8 +50,9 @@ export default async function NotificationsPage() {
                 width="200"
                 height="200"
                 alt="no image placeholder image"
+                className="opacity-50 grayscale"
               ></Image>
-              <h2 className="text-2xl">You have no notifications</h2>
+              <h2 className="text-2xl text-neutral-500 dark:text-neutral-400">You have no notifications</h2>
             </div>
           )}
 
@@ -67,10 +68,10 @@ export default async function NotificationsPage() {
                       {getNotificationIcon(notification)}
                     </div>
                     <div className="space-y-2 flex-grow">
-                      <h3 className="text-lg sm:text-xl">
+                      <h3 className="text-lg sm:text-xl font-medium">
                         {notification.message}
                       </h3>
-                      <p className="text-sm sm:text-base text-gray-900 dark:text-gray-200">
+                      <p className="text-sm sm:text-base text-neutral-500 dark:text-neutral-400">
                         {formatDate(notification.createdOn)}
                       </p>
                     </div>

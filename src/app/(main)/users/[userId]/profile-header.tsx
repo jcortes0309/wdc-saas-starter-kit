@@ -33,7 +33,7 @@ export async function ProfileHeader({ userId }: { userId: UserId }) {
               width={60}
               height={60}
               alt="image of the group"
-              className="rounded-full object-cover h-[60px]"
+              className="rounded-full object-cover h-[60px] w-[60px] border-2 border-brand-primary/20 shadow-sm"
             />
 
             <h1 className={pageTitleStyles}>{profile.displayName} </h1>

@@ -56,7 +56,7 @@ export async function UserPostCard({ post }: { post: Post }) {
       <p className="break-words">{post.message}</p>
 
       <div className="flex flex-col sm:flex-row justify-between gap-4">
-        <div className="text-gray-400 flex flex-wrap gap-2 sm:gap-4 w-full items-center text-sm">
+        <div className="text-muted-foreground flex flex-wrap gap-2 sm:gap-4 w-full items-center text-sm">
           <div className="flex gap-2 items-center">
             <MessageCircle className="w-4 h-4" /> {replyCount}
           </div>

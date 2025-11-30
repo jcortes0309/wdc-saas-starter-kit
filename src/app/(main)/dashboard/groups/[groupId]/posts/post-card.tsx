@@ -66,7 +66,7 @@ export async function PostCard({ post }: { post: Post }) {
       <p>{post.message}</p>
 
       <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
-        <div className="text-gray-400 flex flex-wrap gap-2 sm:gap-4 w-full items-center">
+        <div className="text-muted-foreground flex flex-wrap gap-2 sm:gap-4 w-full items-center">
           <div className="flex gap-2 items-center text-sm">
             <MessageCircle className="w-4 h-4" /> {replyCount}
           </div>

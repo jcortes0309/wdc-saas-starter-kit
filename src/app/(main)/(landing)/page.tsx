@@ -1,10 +1,13 @@
 import { ComingSoon } from "@/app/(main)/(coming-soon)/coming-soon";
+import { CredabilitySection } from "@/app/(main)/(landing)/_sections/credability";
 import { DemoSection } from "@/app/(main)/(landing)/_sections/demo";
 import { FaqSection } from "@/app/(main)/(landing)/_sections/faq";
 import { FeaturesSection } from "@/app/(main)/(landing)/_sections/features";
 import { HeroSection } from "@/app/(main)/(landing)/_sections/hero";
 import { NewsletterSection } from "@/app/(main)/(landing)/_sections/newsletter";
 import { PricingSection } from "@/app/(main)/(landing)/_sections/pricing";
+import { ShowcaseSection } from "@/app/(main)/(landing)/_sections/showcase";
+import { StackSection } from "@/app/(main)/(landing)/_sections/stack";
 import { TestimonalsSection } from "@/app/(main)/(landing)/_sections/testimonals";
 import { TheProblemSection } from "@/app/(main)/(landing)/_sections/the-problem";
 
@@ -32,10 +35,19 @@ export default async function Home() {
       : false;
 
     return (
-      <div>
+      <main>
         <HeroSection />
+        <CredabilitySection />
+        <TheProblemSection />
+        <FeaturesSection />
+        <StackSection />
+        <DemoSection />
+        <ShowcaseSection />
+        <TestimonalsSection />
         <PricingSection hasSubscription={hasSubscription} />
-      </div>
+        <FaqSection />
+        <NewsletterSection />
+      </main>
     );
   }
 }

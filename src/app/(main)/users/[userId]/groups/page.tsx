@@ -14,15 +14,15 @@ export default async function GroupsContent({
   return (
     <div className="space-y-8">
       {userGroups.length === 0 && (
-        <div className="flex flex-col items-center justify-center py-12 gap-8 dark:bg-slate-900 rounded-xl">
+        <div className="flex flex-col items-center justify-center py-12 gap-8 bg-neutral-100/50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200 dark:border-neutral-800">
           <Image
             src="/empty-state/mountain.svg"
             width="200"
             height="200"
             alt="no groups placeholder image"
-            className="w-full max-w-[200px] h-auto"
+            className="w-full max-w-[200px] h-auto opacity-50 grayscale"
           />
-          <h2 className="text-2xl text-center px-4">
+          <h2 className="text-2xl text-center px-4 text-neutral-500 dark:text-neutral-400">
             This user isn't part of any groups
           </h2>
         </div>

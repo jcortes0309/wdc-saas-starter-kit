@@ -1,78 +1,96 @@
-"use client";
-
+import Container from "@/components/container";
+import { Heart, MessageSquare, Calendar, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import React from "react";
-
-const cellClass =
-  "flex items-center justify-center rounded-xl bg-green-800 p-4 text-xl text-center";
 
 export function TheProblemSection() {
+  const problems = [
+    {
+      icon: Heart,
+      title: "Feeling Isolated?",
+      description: "Finding people who truly share your specific interests can feel impossible in a crowded digital world.",
+      highlight: "text-status-error",
+      bg: "bg-status-error/10",
+      border: "border-status-error/20"
+    },
+    {
+      icon: MessageSquare,
+      title: "Too Much Noise",
+      description: "Traditional social media is cluttered with ads and algorithms that keep you scrolling, not connecting.",
+      highlight: "text-status-warning",
+      bg: "bg-status-warning/10",
+      border: "border-status-warning/20"
+    },
+    {
+      icon: Calendar,
+      title: "Planning Nightmares",
+      description: "Organizing simple meetups involves endless group chats, lost details, and flaky RSVPs.",
+      highlight: "text-status-info",
+      bg: "bg-status-info/10",
+      border: "border-status-info/20"
+    },
+  ];
+
   return (
-    <div className="relative overflow-x-clip">
-      <div className="z-10 absolute w-[2000px] dark:bg-background rotate-6 h-[200px] top-[20px] -left-[300px]"></div>
-      <div className="z-10 absolute w-[2000px] dark:bg-background -rotate-6 h-[200px] top-[20px] -left-[300px]"></div>
-      <section
-        id="features"
-        className="z-20 relative container mx-auto py-12 pt-24 bg-gray-100 dark:bg-background"
-      >
-        <p className="text-6xl mb-24 max-w-4xl mx-auto text-center">
-          I know, you know, starting a project has{" "}
-          <span className="font-bold">too many options</span>...
-        </p>
+    <section className="py-24 relative bg-background">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 mb-6">
+              Building Community <br/>
+              <span className="text-neutral-400">Shouldn't Be Hard.</span>
+            </h2>
+            <p className="text-xl text-neutral-600 dark:text-neutral-400 mb-8 leading-relaxed">
+              We've all been there. You want to connect, but the tools get in the way. 
+              Group Finder strips away the noise and gives you the dedicated space you need.
+            </p>
+            <div className="h-1 w-20 bg-brand-primary rounded-full mb-12" />
+            
+            <div className="space-y-6">
+              {problems.map((item, i) => (
+                <div key={i} className="flex gap-4 group">
+                  <div className={cn("w-12 h-12 rounded-full flex items-center justify-center shrink-0 transition-colors", item.bg, item.highlight)}>
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-neutral-900 dark:text-neutral-100 mb-1 group-hover:text-brand-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <div className="grid grid-cols-3 gap-12 mb-24">
-          <p className={cn(cellClass, "bg-green-800")}>
-            1. just run your favorite npx create command... on wait, should I
-            use next? vite? nuxt? sveltekit? someone said use angular 😊
-          </p>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-secondary/20 rounded-3xl blur-3xl" />
+            <Card className="relative bg-card/50 backdrop-blur-xl border-neutral-200 dark:border-neutral-800 shadow-2xl p-8 rounded-3xl">
+              <CardContent className="p-0 space-y-8">
+                <div className="space-y-4">
+                  <div className="h-2 bg-neutral-100 dark:bg-neutral-800 rounded-full w-3/4" />
+                  <div className="h-2 bg-neutral-100 dark:bg-neutral-800 rounded-full w-1/2" />
+                  <div className="h-2 bg-neutral-100 dark:bg-neutral-800 rounded-full w-full" />
+                </div>
+                
+                <div className="p-6 rounded-2xl bg-brand-primary/5 border border-brand-primary/10">
+                  <p className="text-brand-primary font-medium text-center text-lg">
+                    "Finally, a place where I can actually find my tribe."
+                  </p>
+                </div>
 
-          <p className={cn(cellClass, "bg-cyan-800")}>
-            2. Now find a component library that does&apos;t suck. DaisyUI?
-            Mantine? Chakra? Install it, set it up, determine is was a mistake.
-            🤔
-          </p>
-
-          <p className={cn(cellClass, "bg-blue-800")}>
-            3. But how will users register? reading through the next-auth docs
-            sucks. How do I figure out if someone is authenticated AND
-            authorized to see that button? 🫠
-          </p>
-
-          <p className={cn(cellClass, "bg-yellow-800")}>
-            4. Uh oh, where should I store my data? What ORM to use? Not
-            DynamoDB that&apos;s for sure. Where do I store my files? R2, S3? 😟
-          </p>
-
-          <p className={cn(cellClass, "bg-pink-800")}>
-            5. Now you need to deploy your app, but where that won&apos;t
-            bankrupt you in case you get DDoSed? Railway? Vercel? AWS? A VPS?!
-            😖
-          </p>
-
-          <p className={cn(cellClass, "bg-red-800")}>
-            6. OH WAIT you forgot that environment variable for the 3rd time and
-            have to redeploy because you didn&apos;t use a typesafe env library
-            from the start 🤬
-          </p>
+                <div className="flex justify-center">
+                   <div className="px-6 py-3 rounded-full bg-neutral-900 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-900 font-semibold shadow-lg flex items-center gap-2">
+                     The Group Finder Way <ArrowRight className="w-4 h-4" />
+                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </section>
-
-      <section className="bg-white dark:bg-gray-900 py-24">
-        <p className="text-4xl text-center max-w-xl mx-auto mb-12">
-          I&apos;ve built a LOT of projects and wasted a lot of time with the
-          initial project setup.
-        </p>
-
-        <p className="text-4xl text-center max-w-xl mx-auto mb-12">
-          <span className="rotate-3 text-blue-300">Trust me...</span>{" "}
-          you&apos;ll want a starter kit. It&apos;s why I&apos;m using this for
-          all my SaaS products.
-        </p>
-
-        <p className="text-6xl text-center max-w-xl mx-auto text-green-400">
-          let&apos;s get to the fun stuff!
-        </p>
-      </section>
-    </div>
+      </Container>
+    </section>
   );
 }

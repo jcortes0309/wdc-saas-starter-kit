@@ -13,7 +13,7 @@ export default function SuccessPage() {
           premium starter kit
         </p>
 
-        <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400 py-4">
+        <p className="font-light text-muted-foreground sm:text-xl py-4">
           <Button variant="secondary" asChild size="lg">
             <Link
               target="_blank"

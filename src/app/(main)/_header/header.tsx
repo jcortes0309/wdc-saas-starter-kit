@@ -38,7 +38,7 @@ export async function Header() {
               height={40}
               className="rounded-full"
             />
-            <span className="text-sm md:text-base lg:text-2xl font-bold">
+            <span className="text-sm md:text-base lg:text-2xl font-bold text-foreground">
               {applicationName}
             </span>
           </Link>
@@ -85,7 +85,7 @@ async function HeaderActions() {
             <DropdownMenuTrigger>
               <Suspense
                 fallback={
-                  <div className="bg-gray-800 rounded-full h-10 w-10 shrink-0 flex items-center justify-center">
+                  <div className="bg-neutral-800 dark:bg-neutral-700 rounded-full h-10 w-10 shrink-0 flex items-center justify-center text-foreground">
                     ..
                   </div>
                 }

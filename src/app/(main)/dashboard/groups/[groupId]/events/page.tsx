@@ -42,7 +42,7 @@ export default async function MembersPage({
           <div
             className={cn(
               cardStyles,
-              "flex flex-col gap-8 justify-center items-center p-12"
+              "flex flex-col gap-8 justify-center items-center p-12 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800"
             )}
           >
             <Image
@@ -50,8 +50,9 @@ export default async function MembersPage({
               width="200"
               height="200"
               alt="no image placeholder image"
+              className="opacity-50 grayscale"
             ></Image>
-            <h2>No events created yet</h2>
+            <h2 className="text-xl text-neutral-500 dark:text-neutral-400">No events created yet</h2>
           </div>
         )}
 
@@ -73,7 +74,7 @@ export default async function MembersPage({
                 <p
                   className={cn(
                     cardStyles,
-                    "flex gap-8 items-center mt-8 py-4 px-4"
+                    "flex gap-8 items-center mt-8 py-4 px-4 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400"
                   )}
                 >
                   No upcoming events found
@@ -103,7 +104,7 @@ export default async function MembersPage({
                 <p
                   className={cn(
                     cardStyles,
-                    "flex gap-8 items-center mt-8 py-4 px-4"
+                    "flex gap-8 items-center mt-8 py-4 px-4 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 text-neutral-500 dark:text-neutral-400"
                   )}
                 >
                   No expired events found

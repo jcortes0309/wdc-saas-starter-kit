@@ -32,9 +32,9 @@ export function Notifications({
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger>
         <div className="p-2 relative">
-          <BellIcon className="w-6 h-6" />
+          <BellIcon className="w-6 h-6 text-foreground" />
           {notifications.length > 0 && (
-            <div className="absolute top-1 right-[1px] w-2 h-2 bg-red-500 rounded-full flex items-center justify-center text-xs text-white"></div>
+            <div className="absolute top-1 right-[1px] w-2 h-2 bg-status-error dark:bg-status-error rounded-full flex items-center justify-center text-xs text-white"></div>
           )}
         </div>
       </DropdownMenuTrigger>
@@ -43,7 +43,7 @@ export function Notifications({
         <DropdownMenuSeparator />
 
         {notifications.length === 0 && (
-          <div className="flex items-center gap-2 p-4">
+          <div className="flex items-center gap-2 p-4 text-foreground">
             <div>No new notifications</div>
           </div>
         )}
@@ -70,7 +70,7 @@ export function Notifications({
             onClick={() => {
               setIsOpen(false);
             }}
-            className="text-xs text-blue-400 hover:text-blue-500"
+            className="text-xs text-status-info dark:text-status-info hover:opacity-80 transition-opacity"
             href="/notifications"
           >
             View Notifications

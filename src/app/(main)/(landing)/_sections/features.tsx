@@ -1,113 +1,111 @@
-import { cn } from "@/lib/utils";
+import Container from "@/components/container";
 import {
-  BarChartIcon,
-  BlocksIcon,
-  BrushIcon,
-  CodeIcon,
-  DatabaseIcon,
-  DollarSignIcon,
-  FileIcon,
-  FishIcon,
-  LineChartIcon,
-  LockIcon,
-  LockKeyhole,
-  MailIcon,
-  PlugZap,
-  ShieldCheck,
-  ShipIcon,
-  Smartphone,
-  SmartphoneNfc,
-  SunIcon,
-  UserIcon,
+  MessageSquare,
+  Calendar,
+  Users,
+  Shield,
+  Bell,
+  Search,
+  Settings,
+  Zap,
 } from "lucide-react";
-
-const techClass =
-  "text-black hover:scale-105 transition hover:rotate-1 shadow-lg shadow-blue-400/50 bg-slate-200 rounded-xl drop-shadow-xl p-4 flex flex-col justify-center items-center";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function FeaturesSection() {
+  const features = [
+    {
+      icon: MessageSquare,
+      title: "Group Chat",
+      description:
+        "Real-time messaging built for communities. Threads, reactions, and direct messages keep the conversation flowing.",
+    },
+    {
+      icon: Calendar,
+      title: "Event Scheduling",
+      description:
+        "Create recurring meetups, manage RSVPs, and sync with calendars. Never miss a hangout again.",
+    },
+    {
+      icon: Users,
+      title: "Member Roles",
+      description:
+        "Assignable roles and permissions. Give your moderators the tools they need to keep the community safe.",
+    },
+    {
+      icon: Shield,
+      title: "Private Spaces",
+      description:
+        "Create invite-only groups for exclusive content or intimate discussions. You control access.",
+    },
+    {
+      icon: Search,
+      title: "Smart Discovery",
+      description:
+        "Find the right group based on location, interests, and activity level. Connect with local peers.",
+    },
+    {
+      icon: Bell,
+      title: "Notifications",
+      description:
+        "Customizable alerts for events and mentions. Stay in the loop without getting overwhelmed.",
+    },
+    {
+      icon: Settings,
+      title: "Custom Branding",
+      description:
+        "Make your group feel like home with custom banners, colors, and welcome messages.",
+    },
+    {
+      icon: Zap,
+      title: "Instant Sync",
+      description:
+        "Changes update instantly across all devices. Seamless experience on mobile and desktop.",
+    },
+  ];
+
   return (
-    <section
-      id="features"
-      className="container mx-auto py-24 bg-gray-100 dark:bg-background"
-    >
-      <h2 className="max-w-6xl mx-auto text-6xl text-center mb-12">
-        So what&apos;s included in a &quot;modern&quot; starter kit?
-      </h2>
-
-      <p className="text-center text-2xl max-w-2xl mx-auto mb-12">
-        This code starter kit includes the frameworks, libraries, and tech I use
-        most and believe in to be a great choice in regards to performance, ease
-        of development, and customizability.
-      </p>
-
-      <ul className="max-w-6xl mx-auto grid grid-cols-3 px-12 leading-10 gap-6">
-        <div className="flex flex-col gap-6">
-          <li className={techClass}>
-            <CodeIcon /> Next.js 14 App Router
-          </li>
-          <li className={techClass}>
-            <LockIcon /> Authentication with Artic and Oslo
-          </li>
-          <li className={techClass}>
-            <DollarSignIcon /> One-Off Payments with Stripe
-          </li>
-          <li className={techClass}>
-            <SmartphoneNfc /> Stripe Webhooks
-          </li>
-
-          <li className={techClass}>
-            <MailIcon /> Emails with Resend
-          </li>
+    <section id="features" className="py-24 bg-neutral-50 dark:bg-neutral-950/50">
+      <Container>
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 mb-4">
+            Everything You Need to Build <br />
+            <span className="text-brand-primary">Thriving Communities</span>
+          </h2>
+          <p className="text-lg text-neutral-600 dark:text-neutral-400">
+            Powerful tools designed to help you connect, organize, and grow your group without the headache.
+          </p>
         </div>
 
-        <div className="flex flex-col gap-6">
-          <li className={techClass}>
-            <FileIcon /> File Storage on R2
-          </li>
-
-          <li className={techClass}>
-            <PlugZap /> Drizzle ORM
-          </li>
-
-          <li className={techClass}>
-            <DatabaseIcon /> LibSQL using Turso
-          </li>
-
-          <li className={techClass}>
-            <ShipIcon /> Railway Deployments
-          </li>
-
-          <li className={techClass}>
-            <ShieldCheck /> CloudFlare DDoS Protection
-          </li>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <Card
+                key={index}
+                className="group relative overflow-hidden border-neutral-200 dark:border-neutral-800 bg-background hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <CardHeader>
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 bg-neutral-100 dark:bg-neutral-900 text-brand-primary"
+                  >
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <CardTitle className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                    {feature.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
-
-        <div className="flex flex-col gap-6">
-          <li className={techClass}>
-            <BrushIcon /> Tailwind CSS
-          </li>
-
-          <li className={techClass}>
-            <UserIcon /> Account Deletion
-          </li>
-
-          <li className={techClass}>
-            <LineChartIcon /> Analytics via Posthog
-          </li>
-
-          <li className={techClass}>
-            <BlocksIcon /> ShadCN Components
-          </li>
-
-          <li className={techClass}>
-            <SunIcon /> Light / Dark Mode
-          </li>
-
-          <li className={techClass}>
-            <LockKeyhole /> Role Based Auth
-          </li>
-        </div>
-      </ul>
+      </Container>
     </section>
   );
 }

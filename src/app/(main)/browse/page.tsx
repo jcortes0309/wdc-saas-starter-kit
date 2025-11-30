@@ -111,15 +111,15 @@ async function GroupsList({ search, page }: { search?: string; page: number }) {
 
   if (data.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center py-12 gap-8 dark:bg-slate-900 rounded-xl">
+      <div className="flex flex-col items-center justify-center py-12 gap-8 bg-neutral-100/50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200 dark:border-neutral-800">
         <Image
           src="/empty-state/mountain.svg"
           width="200"
           height="200"
           alt="no groups placeholder image"
-          className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64"
+          className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 opacity-50 grayscale"
         />
-        <h2 className="text-xl sm:text-2xl text-center">
+        <h2 className="text-xl sm:text-2xl text-center text-neutral-500 dark:text-neutral-400">
           No groups matching your search
         </h2>
       </div>

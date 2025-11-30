@@ -26,7 +26,7 @@ export default async function PostsContent({
             src="/empty-state/posts.svg"
             width="200"
             height="200"
-            alt="no gruops placeholder image"
+            alt="no groups placeholder image"
           ></Image>
           <h2 className="text-2xl">This user has no posts yet</h2>
         </div>

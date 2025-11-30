@@ -7,13 +7,13 @@ import Image from "next/image";
 function FollowerCard({ profile }: { profile: Profile }) {
   return (
     <div key={profile.userId} className="flex items-center gap-4">
-      <div className="dark:bg-slate-900 flex gap-4 items-center hover:underline border rounded-lg p-4">
+      <div className="bg-card dark:bg-card flex gap-4 items-center hover:border-brand-primary/50 transition-colors border border-neutral-200 dark:border-neutral-800 rounded-xl p-4 shadow-sm">
         <Avatar>
           <AvatarImage src={profile.image || "/group.jpeg"} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Link href={`/users/${profile.userId}/info`}>
-          <p className="text-xl">{profile.displayName}</p>
+          <p className="text-xl font-medium hover:underline decoration-brand-primary">{profile.displayName}</p>
         </Link>
       </div>
     </div>
@@ -32,14 +32,15 @@ export default async function FollowersPage({
   return (
     <div className="space-y-8">
       {followers.length === 0 && (
-        <div className="flex flex-col items-center justify-center py-12 gap-8 dark:bg-slate-900 rounded-xl">
+        <div className="flex flex-col items-center justify-center py-12 gap-8 bg-neutral-100/50 dark:bg-neutral-900/50 rounded-xl border border-neutral-200 dark:border-neutral-800">
           <Image
             src="/empty-state/mountain.svg"
             width="200"
             height="200"
-            alt="no gruops placeholder image"
+            alt="no groups placeholder image"
+            className="opacity-50 grayscale"
           ></Image>
-          <h2 className="text-2xl">This user no followers</h2>
+          <h2 className="text-2xl text-neutral-500 dark:text-neutral-400">This user has no followers</h2>
         </div>
       )}
 

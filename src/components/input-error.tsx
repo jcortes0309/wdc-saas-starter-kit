@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
 
 export function InputError({ children }: { children: ReactNode }) {
-  return <div className="text-red-400 mt-2">{children}</div>;
+  return <div className="text-destructive mt-2 text-sm font-medium">{children}</div>;
 }

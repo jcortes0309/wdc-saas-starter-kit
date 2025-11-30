@@ -27,7 +27,7 @@ export function EventCard({
         />
         <div className="flex flex-col gap-2 sm:gap-4 flex-1">
           <h2 className="text-xl sm:text-2xl font-semibold">{event.name}</h2>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-lg sm:text-xl text-muted-foreground">
             {format(event.startsOn, "PPp")}
           </p>
           <p className="text-sm sm:text-base">{event.description}</p>

@@ -25,7 +25,7 @@ export default async function DangerTab({
       <div className="grid grid-cols-2 gap-8">
         <ConfigurationPanel variant="destructive" title={"Delete this Group"}>
           <div className="flex flex-col gap-8">
-            <p className="dark:text-gray-400">
+            <p className="text-muted-foreground">
               Delete this group and all it's data.
             </p>
             <DeleteGroupButton />

@@ -5,7 +5,7 @@ import Image from "next/image";
 export function Lines() {
   return (
     <svg
-      className="absolute inset-0 z-10 h-full w-full stroke-slate-100 dark:stroke-slate-800"
+      className="absolute inset-0 z-10 h-full w-full stroke-neutral-200 dark:stroke-neutral-800"
       aria-hidden="true"
     >
       <defs>
@@ -33,7 +33,7 @@ export function Lines() {
 export function ComingSoon() {
   return (
     <>
-      <section className="relative pt-12 min-h-screen gap-8 bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 from-green-200 to-blue-100 shadow-md">
+      <section className="relative pt-12 min-h-screen gap-8 bg-gradient-to-b dark:from-neutral-900 dark:to-neutral-800 from-green-200 to-blue-100 shadow-md">
         <Lines />
 
         <ComingSoonHeader />
@@ -43,7 +43,7 @@ export function ComingSoon() {
             <div className="mr-auto place-self-center col-span-7">
               <h1 className="font-semibold max-w-2xl mb-6 text-4xl leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
                 🚀 I&apos;m working on the{" "}
-                <span className="italic text-red-400">perfect</span> SaaS
+                <span className="italic text-brand-primary">perfect</span> SaaS
                 starter kit.
               </h1>
 
@@ -73,8 +73,8 @@ export function ComingSoon() {
         </div>
       </section>
 
-      <section className="border-slate-400 border-t border-b dark:border-slate-500 relative py-12 dark:bg-gray-950 shadow-sm bg-repeat bg-paper dark:bg-plus">
-        <div className="container mx-auto max-w-4xl pt-12 dark:text-gray-200">
+      <section className="border-neutral-200 border-t border-b dark:border-neutral-800 relative py-12 dark:bg-neutral-950 shadow-sm bg-repeat bg-paper dark:bg-plus">
+        <div className="container mx-auto max-w-4xl pt-12 dark:text-neutral-200">
           <h2 className="text-5xl mb-8 font-bold">
             What I&apos;m working on 🛠️
           </h2>

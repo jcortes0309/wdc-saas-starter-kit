@@ -31,25 +31,25 @@ export const metadata: Metadata = {
     { rel: "icon", type: "image/png", sizes: "48x48", url: "/favicon.ico" },
   ],
   keywords:
-    "next.js, starter kit, saas, ecommerce, digital products, saas code kit, indie hacking, indie hacker kit, micro saas, entrepreneurship, Code Starter Kit, SaaS Product Launch, Code Documentation Tutorial, Beginner Coding Kit, Start-up SaaS Kit, Coding Guides and Resources, Video Tutorials for Coding, Beginner SaaS Guide, Launch your First SaaS, Step-by-step Coding Kit, SaaS Launch Kit, Software as a Service Starter, Easy Code Launch Kit, Coding Skills for SaaS, Starter Kit for SaaS, Code, Document, Launch, Comprehensive Coding Starter Kit, Master SaaS Product Launch, SaaS Documentation Tutorial, First-Time Coders Kit, SaaS coding course, Initiate SaaS Journey, Seamless SaaS Launch Guide, First SaaS Product Guidance, Bootstrap SaaS Tutorial, Ultimate SaaS Starter Pack, Learning Guide for SaaS, DIY SaaS Kit, Code your SaaS Product, All-in-one Coding Starter Kit",
+    "community platform, group finder, meetup organizer, social groups, hobby groups, event scheduling, community building, find friends, interest groups, local communities, online communities, group chat, member management, private groups",
   description:
-    "The code kit to help you quickly setup an online store and sell your digital assets without a middleman skipping off the top of your profits.",
+    "Connect with like-minded people, join groups, and organize events. Group Finder makes it easy to build and grow your community.",
   openGraph:
     mode === "comingSoon"
       ? {
-          title: "WDCStarterKit.com",
+          title: "Group Finder - Build Your Community",
           description:
-            "I'm building the ultimate next.js starter kit to help you hit the ground runnning on your next saas product.",
-          url: "https://wdcstarterkit.com",
-          siteName: "WDC StarterKit",
+            "The easiest way to find your tribe and build meaningful connections.",
+          url: "https://groupfinder.app",
+          siteName: "Group Finder",
           type: "website",
           images: [
             {
-              url: "https://wdcstarterkit.com/starterkitcard.png",
-              secureUrl: "https://wdcstarterkit.com/starterkitcard.png",
-              width: 800,
-              height: 418,
-              alt: "The WDC StarterKit social media card image",
+              url: "https://groupfinder.app/og-image.png",
+              secureUrl: "https://groupfinder.app/og-image.png",
+              width: 1200,
+              height: 630,
+              alt: "Group Finder - Find Your People",
             },
           ],
         }

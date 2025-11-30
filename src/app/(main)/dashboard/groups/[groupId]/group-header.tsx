@@ -67,21 +67,21 @@ export async function GroupHeader({
 
               <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2 sm:gap-4">
                 <div className="flex items-center gap-2">
-                  <UsersIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 dark:text-gray-400" />
-                  <span className="text-xs sm:text-sm font-medium">
+                  <UsersIcon className="h-4 w-4 sm:h-5 sm:w-5 text-brand-primary" />
+                  <span className="text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-400">
                     {numberOfMembers} members
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CalendarIcon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 dark:text-gray-400" />
-                  <span className="text-xs sm:text-sm font-medium">
+                  <CalendarIcon className="h-4 w-4 sm:h-5 sm:w-5 text-brand-primary" />
+                  <span className="text-xs sm:text-sm font-medium text-neutral-600 dark:text-neutral-400">
                     {upcomingEvents.length} upcoming events
                   </span>
                 </div>
 
                 {!group.isPublic && (
                   <Badge
-                    className="p-1 sm:p-2 flex gap-1 sm:gap-2 w-fit px-2 sm:px-4 items-center text-xs sm:text-sm"
+                    className="p-1 sm:p-2 flex gap-1 sm:gap-2 w-fit px-2 sm:px-4 items-center text-xs sm:text-sm bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 border-neutral-200 dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-700"
                     variant={"outline"}
                   >
                     <LockIcon

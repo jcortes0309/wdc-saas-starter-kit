@@ -19,16 +19,19 @@ export default async function InfoContent({
         <div
           className={cn(
             cardStyles,
-            "flex flex-col items-center justify-center py-12 gap-8"
+            "flex flex-col items-center justify-center py-12 gap-8 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800"
           )}
         >
           <Image
             src="/empty-state/mountain.svg"
             width="200"
             height="200"
-            alt="no gruops placeholder image"
+            alt="no groups placeholder image"
+            className="opacity-50 grayscale"
           ></Image>
-          <h2 className="text-2xl">This user has no bio</h2>
+          <h2 className="text-2xl text-neutral-500 dark:text-neutral-400">
+            This user has no bio
+          </h2>
         </div>
       )}
 

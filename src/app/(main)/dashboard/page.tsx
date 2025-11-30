@@ -32,7 +32,7 @@ export default async function DashboardPage() {
         <div
           className={cn(
             cardStyles,
-            "flex flex-col items-center gap-6 p-12 w-full"
+            "flex flex-col items-center gap-6 p-12 w-full bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800"
           )}
         >
           <Image
@@ -40,8 +40,9 @@ export default async function DashboardPage() {
             width="200"
             height="200"
             alt="no image placeholder image"
+            className="opacity-50 grayscale"
           ></Image>
-          <h2>Uh-oh, you don't own any groups</h2>
+          <h2 className="text-xl text-neutral-500 dark:text-neutral-400">Uh-oh, you don't own any groups</h2>
 
           <div className="flex gap-4">
             <CreateGroupButton />
@@ -79,7 +80,7 @@ export default async function DashboardPage() {
         </div>
 
         {ownedGroups.length === 0 && (
-          <p className="flex gap-8 items-center mt-8 py-4 rounded border dark:bg-gray-800 px-4">
+          <p className="flex gap-8 items-center mt-8 py-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/50 px-4 text-neutral-600 dark:text-neutral-400">
             You don't manage any groups
           </p>
         )}
@@ -101,7 +102,7 @@ export default async function DashboardPage() {
 
         {memberGroups.length === 0 && (
           <p
-            className={cn(cardStyles, "flex gap-8 items-center mt-8 py-4 px-4")}
+            className="flex gap-8 items-center mt-8 py-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-900/50 px-4 text-neutral-600 dark:text-neutral-400"
           >
             You're not part of any groups
           </p>

@@ -53,7 +53,7 @@ async function PostsList({ groupId }: { groupId: string }) {
         <div
           className={cn(
             cardStyles,
-            "flex flex-col gap-8 justify-center items-center py-12"
+            "flex flex-col gap-8 justify-center items-center py-12 bg-neutral-100/50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800"
           )}
         >
           <Image
@@ -61,8 +61,9 @@ async function PostsList({ groupId }: { groupId: string }) {
             width="200"
             height="200"
             alt="no image placeholder image"
+            className="opacity-50 grayscale"
           ></Image>
-          <h2>No posts created yet</h2>
+          <h2 className="text-xl text-neutral-500 dark:text-neutral-400">No posts created yet</h2>
           <CreatePostButton />
         </div>
       )}

@@ -40,7 +40,7 @@ export default async function Settings({
               className="w-full h-[100px] object-cover"
               alt="image of the group"
             />
-            <p className="dark:text-gray-400 text-sm">
+            <p className="text-muted-foreground text-sm">
               Upload a group image to make your group stand out.
             </p>
             <BannerUploadForm groupId={group.id} />
@@ -53,7 +53,7 @@ export default async function Settings({
 
         <ConfigurationPanel title={"Group Visibility"}>
           <div className="flex flex-col gap-8">
-            <p className="dark:text-gray-400 text-sm">
+            <p className="text-muted-foreground text-sm">
               Groups are private by default. If you want random people on the
               internet to find and join your group without an invite, switch
               this to on.
