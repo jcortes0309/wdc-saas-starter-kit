@@ -16,7 +16,11 @@ if (typeof window !== "undefined") {
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
-    <RootProvider>
+    <RootProvider
+      search={{
+        enabled: true,
+      }}
+    >
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
